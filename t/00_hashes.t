@@ -58,7 +58,8 @@ ok my ($k,$v) = %hash, q{what will this do?};
 ok $k =~ m/^key/     , q{in list context we unroll the hash back to a list, effectivly.};
 
 #-------------------------------------------------------------------------------
-#  K, now that we know all that we can merging two or more hashes... 
+#  K, now that we know all that we can merging two or more 2D hashes... but only key => scalar value hashes
+#  if you want to do a true merge of deeply nested hashes there are solutions on CPAN that do the right thing.
 #-------------------------------------------------------------------------------
 ok my %new_hash = ( key3 => 'value3' ), q{just a new hash to merge in to our %hash};
 is $hash{key3}, undef                 , q{just making sure that there's not a key3 in %hash};
